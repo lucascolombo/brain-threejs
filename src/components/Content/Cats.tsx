@@ -1,13 +1,12 @@
 import { FC, useRef, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Group } from 'three'
-import { Text3D, useMatcapTexture, useTexture } from '@react-three/drei'
+import { useTexture } from '@react-three/drei'
 import gsap from 'gsap'
 
 const Cats: FC = () => {
     const textRef = useRef<Group>(null)    
-    const [ subtitleTexture ] = useMatcapTexture('C35C04_F9C30C_EE9F04_E08304', 256)
-
+    
     useFrame((state) => { 
         if (textRef?.current) {
             textRef?.current.lookAt(state.camera.position)

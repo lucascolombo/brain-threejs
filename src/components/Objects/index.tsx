@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { useTexture } from '@react-three/drei'
-import { Vector3, Group, DoubleSide } from 'three'
+import { Vector3, Group } from 'three'
 import gsap from 'gsap'
 
 import objects from '../../data'
